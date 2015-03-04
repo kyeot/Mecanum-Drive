@@ -36,5 +36,6 @@ public class OI {
     // button.whenReleased(new ExampleCommand());
 	
 	public static Joystick driveJoystick = new Joystick(RobotMap.driveJoystickId);
+	public static Joystick manipulatorJoystick = new Joystick(RobotMap.manipulatorJoystickId);
 }
 
