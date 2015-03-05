@@ -1,16 +1,10 @@
 package org.usfirst.frc.team2783.robot;
 
-import org.usfirst.frc.team2783.robot.commands.CenterCamera;
-import org.usfirst.frc.team2783.robot.commands.CloseClamper;
-import org.usfirst.frc.team2783.robot.commands.LowerLifter;
-import org.usfirst.frc.team2783.robot.commands.OpenClamper;
-import org.usfirst.frc.team2783.robot.commands.RaiseLifter;
-import org.usfirst.frc.team2783.robot.triggers.Dpad;
+import org.usfirst.frc.team2783.robot.commands.*;
+import org.usfirst.frc.team2783.robot.triggers.*;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.buttons.Trigger;
+import edu.wpi.first.wpilibj.buttons.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
