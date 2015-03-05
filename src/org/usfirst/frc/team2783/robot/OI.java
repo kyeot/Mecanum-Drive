@@ -1,7 +1,10 @@
 package org.usfirst.frc.team2783.robot;
 
+import org.usfirst.frc.team2783.robot.commands.CenterCamera;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -37,5 +40,11 @@ public class OI {
 	
 	public static Joystick driveJoystick = new Joystick(RobotMap.driveJoystickId);
 	public static Joystick manipulatorJoystick = new Joystick(RobotMap.manipulatorJoystickId);
+	
+	Button centerCameraButton = new JoystickButton(manipulatorJoystick, 9);
+	
+	public OI() {
+		centerCameraButton.whenPressed(new CenterCamera());
+	}
 }
 
