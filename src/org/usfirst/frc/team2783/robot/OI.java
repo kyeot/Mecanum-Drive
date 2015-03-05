@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2783.robot;
 
 import org.usfirst.frc.team2783.robot.commands.CenterCamera;
+import org.usfirst.frc.team2783.robot.commands.CloseClamper;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -42,9 +43,11 @@ public class OI {
 	public static Joystick manipulatorJoystick = new Joystick(RobotMap.manipulatorJoystickId);
 	
 	Button centerCameraButton = new JoystickButton(manipulatorJoystick, 9);
+	Button autoCloseButton = new JoystickButton(manipulatorJoystick, 5);
 	
 	public OI() {
 		centerCameraButton.whenPressed(new CenterCamera());
+		autoCloseButton.whenPressed(new CloseClamper());
 	}
 }
 
