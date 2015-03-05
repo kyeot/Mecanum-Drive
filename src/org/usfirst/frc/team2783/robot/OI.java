@@ -2,10 +2,14 @@ package org.usfirst.frc.team2783.robot;
 
 import org.usfirst.frc.team2783.robot.commands.CenterCamera;
 import org.usfirst.frc.team2783.robot.commands.CloseClamper;
+import org.usfirst.frc.team2783.robot.commands.LowerLifter;
+import org.usfirst.frc.team2783.robot.commands.RaiseLifter;
+import org.usfirst.frc.team2783.robot.triggers.Dpad;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.buttons.Trigger;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -42,10 +46,16 @@ public class OI {
 	public static Joystick driveJoystick = new Joystick(RobotMap.driveJoystickId);
 	public static Joystick manipulatorJoystick = new Joystick(RobotMap.manipulatorJoystickId);
 	
+	Trigger raiseLifterTrigger = new Dpad(manipulatorJoystick, 0, 0);
+	Trigger lowerLifterTrigger = new Dpad(manipulatorJoystick, 0, 180);
+	
 	Button centerCameraButton = new JoystickButton(manipulatorJoystick, 9);
 	Button autoCloseButton = new JoystickButton(manipulatorJoystick, 5);
 	
 	public OI() {
+		raiseLifterTrigger.whenActive(new RaiseLifter());
+		lowerLifterTrigger.whenActive(new LowerLifter());
+		
 		centerCameraButton.whenPressed(new CenterCamera());
 		autoCloseButton.whenPressed(new CloseClamper());
 	}
