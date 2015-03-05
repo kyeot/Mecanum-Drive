@@ -25,4 +25,9 @@ public class RobotMap {
 	public static int frontRightMotorId = 13;
 	
 	public static int lifterMotorId = 15;
+	
+	public static int clamperMotorId = 0;
+	
+	public static int clamperEncoderChannelA = 0;
+	public static int clamperEncoderChannelB = 1;
 }
