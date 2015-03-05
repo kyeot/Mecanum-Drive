@@ -3,6 +3,7 @@ package org.usfirst.frc.team2783.robot;
 import org.usfirst.frc.team2783.robot.commands.CenterCamera;
 import org.usfirst.frc.team2783.robot.commands.CloseClamper;
 import org.usfirst.frc.team2783.robot.commands.LowerLifter;
+import org.usfirst.frc.team2783.robot.commands.OpenClamper;
 import org.usfirst.frc.team2783.robot.commands.RaiseLifter;
 import org.usfirst.frc.team2783.robot.triggers.Dpad;
 
@@ -49,15 +50,19 @@ public class OI {
 	Trigger raiseLifterTrigger = new Dpad(manipulatorJoystick, 0, 0);
 	Trigger lowerLifterTrigger = new Dpad(manipulatorJoystick, 0, 180);
 	
+	Button openClamperButton = new JoystickButton(manipulatorJoystick, 4);
+	Button closeClamperButton = new JoystickButton(manipulatorJoystick, 5);
+	
 	Button centerCameraButton = new JoystickButton(manipulatorJoystick, 9);
-	Button autoCloseButton = new JoystickButton(manipulatorJoystick, 5);
 	
 	public OI() {
 		raiseLifterTrigger.whenActive(new RaiseLifter());
 		lowerLifterTrigger.whenActive(new LowerLifter());
 		
+		openClamperButton.whenPressed(new OpenClamper());
+		closeClamperButton.whenPressed(new CloseClamper());
+		
 		centerCameraButton.whenPressed(new CenterCamera());
-		autoCloseButton.whenPressed(new CloseClamper());
 	}
 }
 
