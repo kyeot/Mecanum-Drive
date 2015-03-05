@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
+import org.usfirst.frc.team2783.robot.subsystems.CameraModule;
 import org.usfirst.frc.team2783.robot.subsystems.Clamper;
 import org.usfirst.frc.team2783.robot.subsystems.DriveBase;
 import org.usfirst.frc.team2783.robot.subsystems.Lifter;
@@ -22,6 +23,7 @@ public class Robot extends IterativeRobot {
 	public static final DriveBase driveBase = new DriveBase();
 	public static final Lifter lifter = new Lifter();
 	public static final Clamper clamper = new Clamper();
+	public static final CameraModule cameraModule = new CameraModule();
 	public static OI oi;
 
     Command autonomousCommand;

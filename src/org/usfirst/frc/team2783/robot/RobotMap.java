@@ -30,4 +30,7 @@ public class RobotMap {
 	
 	public static int clamperEncoderChannelA = 0;
 	public static int clamperEncoderChannelB = 1;
+	
+	public static int cameraPanServoChannel = 0;
+	public static int cameraTiltServoChannel = 1;
 }
