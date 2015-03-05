@@ -34,5 +34,13 @@ public class Clamper extends Subsystem {
     public double getEncoderRate() {
     	return clamperEncoder.getRate();
     }
+    
+    public boolean isFwdLimitClosed() {
+    	return clamperTalon.isFwdLimitSwitchClosed();
+    }
+    
+    public boolean isRevLimitClosed() {
+    	return clamperTalon.isRevLimitSwitchClosed();
+    }
 }
 

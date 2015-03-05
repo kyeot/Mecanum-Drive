@@ -4,6 +4,7 @@ import org.usfirst.frc.team2783.robot.OI;
 import org.usfirst.frc.team2783.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -29,6 +30,14 @@ public class DriveClamper extends Command {
     	
     	//Pass the speed to to the clamper subsystem
     	Robot.clamper.setClamperSpeed(-speed);
+    	
+    	if (Robot.clamper.isFwdLimitClosed()) {
+    		SmartDashboard.putString("DB/String 5", "Clamper: Low limit");
+    	} else if (Robot.clamper.isRevLimitClosed()) {
+    		SmartDashboard.putString("DB/String 5", "Clamper: Upper Limit");
+		} else {
+			SmartDashboard.putString("DB/String 5", "Clamper: -----");
+		}
     }
 
     // Make this return true when this Command no longer needs to run execute()

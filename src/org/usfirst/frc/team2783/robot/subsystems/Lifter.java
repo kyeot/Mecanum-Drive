@@ -21,5 +21,13 @@ public class Lifter extends Subsystem {
     public void setLifterSpeed(double speed) {
     	lifterTalon.set(speed);
     }
+    
+    public boolean isFwdLimitClosed() {
+    	return lifterTalon.isFwdLimitSwitchClosed();
+    }
+    
+    public boolean isRevLimitClosed() {
+    	return lifterTalon.isRevLimitSwitchClosed();
+    }
 }
 

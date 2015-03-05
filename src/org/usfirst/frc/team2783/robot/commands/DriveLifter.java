@@ -4,6 +4,7 @@ import org.usfirst.frc.team2783.robot.OI;
 import org.usfirst.frc.team2783.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -23,6 +24,14 @@ public class DriveLifter extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.lifter.setLifterSpeed(OI.manipulatorJoystick.getRawAxis(1));
+    	
+    	if (Robot.lifter.isFwdLimitClosed()) {
+    		SmartDashboard.putString("DB/String 0", "Lift: Low limit");
+    	} else if (Robot.lifter.isRevLimitClosed()) {
+    		SmartDashboard.putString("DB/String 0", "Lift: Upper Limit");
+		} else {
+			SmartDashboard.putString("DB/String 0", "Lift: -----");
+		}
     }
 
     // Make this return true when this Command no longer needs to run execute()
