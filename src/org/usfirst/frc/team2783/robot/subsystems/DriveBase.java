@@ -19,6 +19,12 @@ public class DriveBase extends Subsystem {
 		new TalonSRX(RobotMap.rearRightMotorId)
 	);
 	
+	public DriveBase() {
+		super();
+		this.driveBase.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
+		this.driveBase.setInvertedMotor(RobotDrive.MotorType.kRearRight, true);
+	}
+	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         setDefaultCommand(new BasicDrive());
