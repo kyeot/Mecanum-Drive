@@ -3,8 +3,8 @@ package org.usfirst.frc.team2783.robot.subsystems;
 import org.usfirst.frc.team2783.robot.RobotMap;
 import org.usfirst.frc.team2783.robot.commands.BasicDrive;
 
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.RobotDrive;
-import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -13,10 +13,10 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class DriveBase extends Subsystem {
 
 	private RobotDrive driveBase = new RobotDrive(
-		new TalonSRX(RobotMap.frontLeftMotorId), 
-		new TalonSRX(RobotMap.rearLeftMotorId), 
-		new TalonSRX(RobotMap.frontRightMotorId), 
-		new TalonSRX(RobotMap.rearRightMotorId)
+		new CANTalon(RobotMap.frontLeftMotorId), 
+		new CANTalon(RobotMap.rearLeftMotorId), 
+		new CANTalon(RobotMap.frontRightMotorId), 
+		new CANTalon(RobotMap.rearRightMotorId)
 	);
 	
 	public DriveBase() {

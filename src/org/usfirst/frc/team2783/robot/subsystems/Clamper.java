@@ -3,8 +3,8 @@ package org.usfirst.frc.team2783.robot.subsystems;
 import org.usfirst.frc.team2783.robot.RobotMap;
 import org.usfirst.frc.team2783.robot.commands.DriveClamper;
 
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Clamper extends Subsystem {
     
-    TalonSRX clamperTalon = new TalonSRX(RobotMap.clamperMotorId);
+    CANTalon clamperTalon = new CANTalon(RobotMap.clamperMotorId);
     Encoder clamperEncoder = new Encoder(
     	RobotMap.clamperEncoderChannelA, 
     	RobotMap.clamperEncoderChannelB
