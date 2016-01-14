@@ -1,15 +1,15 @@
 
 package org.usfirst.frc.team2783.robot;
 
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
 import org.usfirst.frc.team2783.robot.subsystems.CameraModule;
 import org.usfirst.frc.team2783.robot.subsystems.Clamper;
 import org.usfirst.frc.team2783.robot.subsystems.DriveBase;
 import org.usfirst.frc.team2783.robot.subsystems.Lifter;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 /**
  * The VM is configured to automatically run this class, and to call the
