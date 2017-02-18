@@ -3,7 +3,8 @@ package org.usfirst.frc.team2783.robot.subsystems;
 import org.usfirst.frc.team2783.robot.RobotMap;
 import org.usfirst.frc.team2783.robot.commands.BasicDrive;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import com.ctre.CANTalon;
+
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -31,7 +32,7 @@ public class DriveBase extends Subsystem {
     }
     
     public void mecanumDrive(double x, double y, double rotation) {
-    	driveBase.mecanumDrive_Cartesian(x, y, rotation, 0);
+    	driveBase.tankDrive(x, y);
     }
 }
 
