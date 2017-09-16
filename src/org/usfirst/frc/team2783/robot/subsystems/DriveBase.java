@@ -31,8 +31,8 @@ public class DriveBase extends Subsystem {
         setDefaultCommand(new BasicDrive());
     }
     
-    public void mecanumDrive(double x, double y, double rotation) {
-    	driveBase.tankDrive(x, y);
+    public void mecanumDrive(double x, double y, double rot) {
+    	driveBase.mecanumDrive_Cartesian(x, y, rot, 0.0);
     }
 }
 
