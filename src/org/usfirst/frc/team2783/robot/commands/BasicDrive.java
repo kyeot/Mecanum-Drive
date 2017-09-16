@@ -23,9 +23,9 @@ public class BasicDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Robot.driveBase.mecanumDrive(
-    		OI.driveJoystick.getRawAxis(0), 
-    		OI.driveJoystick.getRawAxis(1), 
-    		OI.driveJoystick.getRawAxis(4));
+    		(Math.abs(OI.driveJoystick.getRawAxis(4)) <= 0.2) ? 0.0 : OI.driveJoystick.getRawAxis(4), 
+    		(Math.abs(OI.driveJoystick.getRawAxis(1)) <= 0.2) ? 0.0 : OI.driveJoystick.getRawAxis(1), 
+    		(Math.abs(OI.driveJoystick.getRawAxis(0)) <= 0.2) ? 0.0 : OI.driveJoystick.getRawAxis(0));
     }
 
     // Make this return true when this Command no longer needs to run execute()
