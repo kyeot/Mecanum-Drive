@@ -44,7 +44,7 @@ public class OI {
 	Trigger raiseLifterTrigger = new Dpad(manipulatorJoystick, 0, 0);
 	Trigger lowerLifterTrigger = new Dpad(manipulatorJoystick, 0, 180);
 	
-	Button openClamperButton = new JoystickButton(manipulatorJoystick, 4);
+	Button openClamperButton = new JoystickButton(manipulatorJoystick, 6);
 	Button closeClamperButton = new JoystickButton(manipulatorJoystick, 5);
 	
 	Button centerCameraButton = new JoystickButton(manipulatorJoystick, 9);

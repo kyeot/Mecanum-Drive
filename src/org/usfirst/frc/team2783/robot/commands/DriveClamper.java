@@ -26,7 +26,7 @@ public class DriveClamper extends Command {
     	double speed;
     	
     	//Combine the left and right triggers to create a -1 to 1 speed value for the clamper
-    	speed = (-OI.manipulatorJoystick.getRawAxis(2)) + OI.manipulatorJoystick.getRawAxis(3);
+    	speed = (-OI.manipulatorJoystick.getRawAxis(3)) + OI.manipulatorJoystick.getRawAxis(2);
     	
     	//Pass the speed to to the clamper subsystem
     	Robot.clamper.setClamperSpeed(-speed);
